@@ -1,0 +1,43 @@
+{
+    "name": "luoweikingjj/laravel-server-monitor",
+    "description": "Server Monitoring Command for Laravel Applications",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "luowei",
+            "email": "luoweikingj@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "laravel/framework": "~5.6",
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.6.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Luoweikingjj\\ServerMonitor\\": "src"
+        },
+        "files": [
+            "src/Helpers/functions.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Luoweikingjj\\ServerMonitor\\ServerMonitorServiceProvider"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Luoweikingjj\\ServerMonitor\\Test\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+}
